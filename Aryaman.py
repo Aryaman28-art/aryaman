@@ -1,4 +1,5 @@
 import unittest
+
 class Calculator:
     def add(self, x, y):
         return x + y
@@ -14,22 +15,24 @@ class Calculator:
             raise ValueError("Division by zero is not allowed")
         return x / y
 
-class CalculatorTest(unittest.TestCase):
+
+class TestCalculator(unittest.TestCase):
 
     def setUp(self):
         self.calc = Calculator()
 
     def test_add(self):
-        self.assertEqual(11, self.calc.add(3, 7), "The addition is wrong")
+        self.assertEqual(10, self.calc.add(3, 7))
 
     def test_subtract(self):
-        self.assertEqual(12, self.calc.subtract(15, 3), "Subtraction is wrong")
+        self.assertEqual(12, self.calc.subtract(15, 3))
 
     def test_multiply(self):
-        self.assertEqual(30, self.calc.multiply(5, 6), "Multiplication is wrong")
+        self.assertEqual(30, self.calc.multiply(5, 6))
 
     def test_divide(self):
-        self.assertEqual(3, self.calc.divide(6, 2), "Division is wrong")
+        self.assertEqual(3, self.calc.divide(6, 2))
+
 
 if __name__ == '__main__':
     unittest.main()
