@@ -8,3 +8,4 @@ classifier = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
 classifier.fit(X,y)
 X_marks=[[20]]
 print(classifier.predict(X_marks))
+
