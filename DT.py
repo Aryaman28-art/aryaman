@@ -24,4 +24,5 @@ print("Model Accuracy:", acc)
 
 # If you want to test a single value separately:
 single_prediction = model.predict([[60]])
+
 print("Prediction for [60]:", single_prediction)
